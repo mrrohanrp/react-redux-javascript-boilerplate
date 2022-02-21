@@ -1,0 +1,90 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect",
+      "flowVersion": "0.53" // Flow version
+    }
+  },
+  "plugins": ["react", "react-hooks", "prettier"],
+  "globals": {
+    "React": "readonly",
+    "JSX": "readonly"
+  },
+  // ignore files
+  "ignorePatterns": ["/webpack.config.js", "node_modules/**"],
+  "rules": {
+    // no variable declaration
+    "no-var": "error",
+    "no-undef": "error",
+    "prefer-destructuring": "warn",
+    /** React Standard (https://github.com/yannickcr/eslint-plugin-react) */
+    "react/jsx-key": [
+      "warn",
+      {
+        "checkFragmentShorthand": true
+      }
+    ],
+    "react/jsx-no-duplicate-props": "warn",
+    "react/require-render-return": "warn",
+    "react/jsx-no-undef": "error",
+    "react/no-unknown-property": "warn",
+    "react/no-unescaped-entities": "warn",
+    "react/no-direct-mutation-state": "warn",
+    "react/no-string-refs": [
+      "error",
+      {
+        "noTemplateLiterals": true
+      }
+    ],
+    "react/no-deprecated": "warn",
+    "react/no-danger-with-children": "warn",
+    "react/display-name": "warn",
+    "react/no-typos": "warn",
+    "react/prefer-stateless-function": "warn",
+    "react/jsx-pascal-case": "warn",
+    "react/destructuring-assignment": ["warn", "always"],
+    // Code Formating
+    "eol-last": ["error", "always"],
+    "no-mixed-spaces-and-tabs": "error",
+    "no-trailing-spaces": "error",
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    // allow jsx syntax in js files
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/require-default-props": "warn",
+    "react/jsx-props-no-spreading": "off",
+    // arrow function
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    // react hooks
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
