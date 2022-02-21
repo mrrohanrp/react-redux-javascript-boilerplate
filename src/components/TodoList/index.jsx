@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { COMPLETEALL } from 'src/store/todoSlice';
 import { TodoItem } from '../TodoItem';
 
-import style from './style.module.scss';
+import style from './style.module.css';
 
 const TodoList = ({ todos }) => {
   const dispatch = useDispatch();

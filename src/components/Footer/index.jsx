@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { Filter } from 'src/utils/Filter';
 
-import style from './style.module.scss';
+import style from './style.module.css';
 
 export const FILTER_TITLES = {
   [Filter.SHOW_ALL]: 'All',

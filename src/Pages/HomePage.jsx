@@ -6,7 +6,7 @@ import { CLEARCOMPLETED } from 'src/store/todoSlice';
 import { Filter } from 'src/utils/Filter';
 import { Header, TodoList, Footer } from 'src/components';
 
-import style from './HomePage.module.scss';
+import style from './HomePage.module.css';
 
 const FILTER_VALUES = Object.keys(Filter).map((key) => Filter[key]);
 

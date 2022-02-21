@@ -50,9 +50,9 @@ module.exports = {
           }
         ].filter(Boolean)
       },
-      // scss
+      // css
       {
-        test: /\.s[ac]ss$/,
+        test: /\.css$/,
         use: [
           isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           {
@@ -72,7 +72,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                ident: 'postcss-scss',
+                ident: 'postcss',
                 plugins: [
                   require('postcss-import')({ addDependencyTo: webpack }),
                   require('postcss-url')(),
@@ -86,12 +86,6 @@ module.exports = {
                   })
                 ]
               }
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: !isProduction
             }
           }
         ]

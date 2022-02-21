@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { COMPLETETODO, DELETETODO, EDITTODO } from 'src/store/todoSlice';
 import { TodoTextInput } from '../TodoTextInput';
 
-import style from './style.module.scss';
+import style from './style.module.css';
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
